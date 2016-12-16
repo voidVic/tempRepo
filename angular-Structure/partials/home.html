@@ -1,0 +1,41 @@
+<div ng-controller="myController">
+		<!-- <input type="button" ng-click="routeMeToAbout()" value="Click me to route"> -->
+		<div class="user-table" ng-hide="showInsertContacts" >
+
+		<input type="text" ng-model="filterByName" placeholder="Search By Name"></input>
+			<table>
+				<thead>
+					<tr>
+						<td>Name</td>
+						<td>Phone#</td>
+						<td>Address</td>
+						<td>Edit</td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat="user in directoryData | orderBy:'-name' | filter: filterByName ">
+						<td>{{user.name}}</td>
+						<td>{{user.contact}}</td>
+						<td>{{user.address}}</td>
+						<td>
+							<input class="edit-btn" type="button" value="edit" ng-click="edit(user.index)"></input>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+
+	<div class="insert-contacts" ng-show="showInsertContacts" >
+		<input type="text" placeholder="Enter Name" ng-model="user.name"></input>
+		<input type="text" placeholder="Enter Contact" ng-model="user.contact"></input>
+		<input type="text" placeholder="Enter Address" ng-model="user.address"></input>
+
+		<input class="add-contact" type="button" value="Add" ng-click="addContact()"></input>
+	</div>
+
+	<input class="add-button" type="button" value="+" ng-click="showInsert()" ng-hide="showInsertContacts"></input>
+
+
+</div>

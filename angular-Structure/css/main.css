@@ -1,0 +1,68 @@
+body{
+	background-color: #444;
+	color: #FFF;
+}
+
+h1{
+	color:#2faceb;
+	text-align: center;
+}
+
+.edit-btn, .add-button{
+	width: 50px;
+	height: 50px;
+	border-radius: 40px;
+	background-color: #EC5555;
+	color: #FFF;
+	border: none;
+	box-shadow: 2px 2px 5px #151515;
+}
+.edit-btn:hover{
+	background-color: #f66;
+}
+.add-button{
+	position: fixed;
+	right: 100px;
+	bottom: 100px;
+	background-color: #2faceb;
+}
+.add-button:hover{
+	background-color: #68BDE8;
+}
+.add-contact{
+	background-color: #2faceb;
+	color: #FFF;
+	border: none;
+	box-shadow: 2px 2px 5px #444;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+input[type=text]{
+	border-radius: 5px;
+	border: 1px solid #2faceb;
+	display: block;
+	margin: 5px;
+	padding: 2px 5px;
+}
+table{
+	width: 100%;
+	margin-top: 50px;
+}
+thead{
+	font-weight: bold;
+	font-size: 20px;
+}
+thead tr td{
+	border-bottom: 1px solid #2faceb;
+}
+tbody{
+	font-size: 18px;
+}
+
+.edit-block{
+	margin: 50px 100px;
+}
+.edit-block input{
+	margin-bottom: 20px;
+}
